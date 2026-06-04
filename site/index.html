@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مبادرة حلم | قدرات ثانوية 2026</title>
+  <meta name="description" content="مبادرة حلم قدرات ثانوية - منصة احترافية لدورات اختبار القدرات 2026 مع ترشيح ذكي، اختبار تحديد مستوى، وسلة شراء متكاملة." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Top Offer Bar -->
+  <div class="top-offer-bar">
+    <div class="container top-offer-inner">
+      <span><i class="fas fa-bolt"></i> عروض خاصة على دورات القدرات 2026 — المقاعد محدودة والأسعار الحالية لفترة مؤقتة</span>
+      <a href="#courses">تسوّق الآن</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <div class="brand-logo-wrap">
+          <img src="logo.png" alt="مبادرة حلم قدرات ثانوية" class="brand-logo-img" />
+        </div>
+        <div class="brand-text">
+          <strong id="siteNameText">مبادرة حلم</strong>
+          <span id="siteTaglineText">قدرات ثانوية 2026</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home"><i class="fas fa-home"></i> الرئيسية</a>
+        <a href="#courses"><i class="fas fa-book-open"></i> الدورات</a>
+        <a href="#advisor"><i class="fas fa-wand-magic-sparkles"></i> الموصي الذكي</a>
+        <a href="#assessment"><i class="fas fa-clipboard-list"></i> تحديد المستوى</a>
+        <a href="#checkout"><i class="fas fa-credit-card"></i> الاشتراك</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ghost-btn" type="button" onclick="scrollToSection('advisor')">
+          <i class="fas fa-wand-magic-sparkles"></i>
+          اختَر لي دورة
+        </button>
+        <button class="cart-btn" type="button" onclick="toggleCart(true)">
+          <i class="fas fa-bag-shopping"></i>
+          <span>السلة</span>
+          <b id="cartCount">0</b>
+        </button>
+        <button class="menu-toggle" type="button" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <img src="logo.png" alt="مبادرة حلم" class="hero-badge-logo" />
+            مبادرة حلم قدرات ثانوية • التعليم يبدأ بحلم
+          </div>
+          <h1 id="heroTitleText">اختَر دورة القدرات المناسبة لك<br><span>وارفع فرصتك لتحقيق الدرجة التي تستهدفها</span></h1>
+          <p id="heroSubtitleText">
+            منصة مبادرة حلم لدورات القدرات الثانوية 2026 — تجربة عصرية متكاملة، تفاصيل مرتبة لكل دورة، سلة شراء تلقائية، واختبار تحديد مستوى ذكي يرشدك للمسار الأنسب.
+          </p>
+
+          <div class="hero-trust-row">
+            <div class="trust-chip"><i class="fas fa-badge-check"></i> أسعار خاصة</div>
+            <div class="trust-chip"><i class="fas fa-layer-group"></i> 4 مسارات واضحة</div>
+            <div class="trust-chip"><i class="fas fa-brain"></i> توصية ذكية</div>
+            <div class="trust-chip"><i class="fab fa-telegram"></i> تواصل عبر تيليجرام</div>
+          </div>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary" type="button" onclick="scrollToSection('courses')">
+              <i class="fas fa-store"></i>
+              تصفّح الدورات
+            </button>
+            <a class="btn btn-outline" href="https://t.me/qiyas_2026_2030" target="_blank" rel="noopener">
+              <i class="fab fa-telegram"></i>
+              تواصل معنا
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card"><strong>4</strong><span>دورات معروضة</span></div>
+            <div class="stat-card"><strong>2026</strong><span>تحديثات حديثة</span></div>
+            <div class="stat-card"><strong>+90</strong><span>مسار للدرجات العالية</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-shell">
+            <div class="floating-mini-card mini-one">
+              <i class="fas fa-fire"></i>
+              هدفك 90+ يبدأ من الاختيار الصح
+            </div>
+            <div class="floating-mini-card mini-two">
+              <i class="fas fa-clock"></i>
+              وقتك ضيق؟ عندنا المسار المكثّف
+            </div>
+            <div class="floating-mini-card mini-three">
+              <i class="fas fa-bullseye"></i>
+              توصية حسب نتيجتك الحالية
+            </div>
+            <div class="phone-mockup">
+              <div class="mockup-topbar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-banner">
+                  <div>
+                    <small>مبادرة حلم</small>
+                    <h3>قدرات ثانوية 2026</h3>
+                    <p>أضف الدورات للسلة وابدأ رحلتك بثقة</p>
+                  </div>
+                  <img src="logo.png" alt="حلم" class="mockup-logo" />
+                </div>
+                <div class="mockup-list">
+                  <div class="mock-course premium">
+                    <span>الدورة المميزة</span>
+                    <b>349 ر.س</b>
+                  </div>
+                  <div class="mock-course intensive">
+                    <span>الدورة المكثفة</span>
+                    <b>299 ر.س</b>
+                  </div>
+                  <div class="mock-course basic">
+                    <span>الدورة الأساسية</span>
+                    <b>149 ر.س</b>
+                  </div>
+                </div>
+                <div class="mockup-bottom">
+                  <button>إضافة للسلة</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Strip -->
+    <section class="highlights-strip">
+      <div class="container highlights-grid">
+        <article>
+          <i class="fas fa-ranking-star"></i>
+          <div>
+            <h3>ترشيح ذكي فعلي</h3>
+            <p>اختَر دورتك بناءً على درجتك الحالية وهدفك وعدد الأيام المتبقية.</p>
+          </div>
+        </article>
+        <article>
+          <i class="fas fa-cart-plus"></i>
+          <div>
+            <h3>سلة شراء تلقائية</h3>
+            <p>أضف دورة أو أكثر وسيتم جمع السعر مباشرة وعرض ملخص الطلب.</p>
+          </div>
+        </article>
+        <article>
+          <i class="fas fa-building-columns"></i>
+          <div>
+            <h3>بيانات تحويل واضحة</h3>
+            <p>بيانات الحساب البنكي ظاهرة بشكل مرتب مع خانة رفع الإيصال.</p>
+          </div>
+        </article>
+        <article>
+          <i class="fab fa-telegram"></i>
+          <div>
+            <h3>تأكيد الاشتراك عبر تيليجرام</h3>
+            <p>تواصل مباشر مع حساب مبادرة حلم على تيليجرام لتأكيد اشتراكك.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Smart Advisor -->
+    <section class="section advisor-section" id="advisor">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">الموصي الذكي للدورات</span>
+          <h2>اختَر الدورة المناسبة لك في ثوانٍ</h2>
+          <p>أدخل نتيجتك الحالية، حدد هدفك والوقت المتاح، وسنرشح لك الدورة الأنسب مع سبب مقنع للاشتراك.</p>
+        </div>
+
+        <div class="advisor-layout">
+          <form class="advisor-form glass-card" id="advisorForm">
+            <div class="field-grid two-cols">
+              <label>
+                <span>درجتك الحالية في آخر اختبار تجريبي</span>
+                <input type="number" id="currentScore" min="0" max="100" placeholder="مثال: 62" />
+              </label>
+              <label>
+                <span>الدرجة المستهدفة</span>
+                <input type="number" id="targetScore" min="40" max="100" placeholder="مثال: 90" />
+              </label>
+              <label>
+                <span>كم يوم باقي على الاختبار؟</span>
+                <input type="number" id="daysLeft" min="1" placeholder="مثال: 18" />
+              </label>
+              <label>
+                <span>كم ساعة تذاكر يومياً؟</span>
+                <input type="number" id="studyHours" min="0" step="0.5" placeholder="مثال: 2" />
+              </label>
+            </div>
+
+            <div class="switch-line">
+              <label class="checkbox-label">
+                <input type="checkbox" id="useQuizScore" />
+                <span>استخدم متوسط نتيجتي من اختبار تحديد المستوى داخل الموقع</span>
+              </label>
+              <button class="btn btn-soft" type="button" onclick="applyQuizScoreToAdvisor()">
+                <i class="fas fa-chart-line"></i>
+                جلب نتيجتي الحالية
+              </button>
+            </div>
+
+            <div class="advisor-actions">
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                رشّح لي الدورة المناسبة
+              </button>
+              <button class="btn btn-outline" type="button" onclick="scrollToSection('courses')">
+                <i class="fas fa-store"></i>
+                أشوف كل الدورات أولاً
+              </button>
+            </div>
+          </form>
+
+          <div class="advisor-result glass-card" id="advisorResult">
+            <div class="placeholder-state">
+              <i class="fas fa-bullseye"></i>
+              <h3>بانتظار بياناتك</h3>
+              <p>املأ النموذج وسيظهر لك هنا اسم الدورة المناسبة ولماذا هي أفضل خيار لك الآن.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section courses-section" id="courses">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">دورات مبادرة حلم</span>
+            <h2>الدورات المتاحة الآن</h2>
+            <p>كل دورة لها مسار واضح وسعر خاص ومحتوى مرتب، يمكنك إضافة ما يناسبك للسلة فوراً.</p>
+          </div>
+          <div class="section-head-actions">
+            <button class="btn btn-soft" type="button" onclick="toggleCart(true)">
+              <i class="fas fa-bag-shopping"></i>
+              فتح السلة
+            </button>
+          </div>
+        </div>
+
+        <div class="course-filter-chips">
+          <button class="chip active">الكل</button>
+          <button class="chip">بداية التأسيس</button>
+          <button class="chip">رفع الدرجات</button>
+          <button class="chip">استعداد سريع</button>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Compare -->
+    <section class="section compare-section">
+      <div class="container">
+        <div class="section-head centered narrow">
+          <span class="eyebrow">مقارنة سريعة</span>
+          <h2>أي دورة تناسب وضعك الحالي؟</h2>
+        </div>
+
+        <div class="comparison-table-wrap glass-card">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>الدورة</th>
+                <th>الأنسب لـ</th>
+                <th>السعر الحالي</th>
+                <th>السعر السابق</th>
+                <th>القرار الأسرع</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment -->
+    <section class="section assessment-section" id="assessment">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">اختبار تحديد المستوى</span>
+          <h2>جرّب مستواك الآن ثم دع الموقع يرشّح لك الدورة</h2>
+          <p>لدينا بنك أسئلة تفاعلي في القسمين اللفظي والكمي، ونتيجتك هنا تساعد على اقتراح المسار الأنسب لك.</p>
+        </div>
+
+        <div class="assessment-summary" id="assessmentSummary"></div>
+
+        <div class="quiz-shell glass-card">
+          <div class="summary-tabs">
+            <button class="tab-btn active" onclick="showQuizTab('lafzi', this)">القسم اللفظي</button>
+            <button class="tab-btn" onclick="showQuizTab('kami', this)">القسم الكمي</button>
+          </div>
+
+          <div class="quiz-tab active" id="lafzi-tab">
+            <div id="lafziQuiz"></div>
+          </div>
+
+          <div class="quiz-tab" id="kami-tab">
+            <div id="kamiQuiz"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section social-proof-section">
+      <div class="container">
+        <div class="section-head centered narrow">
+          <span class="eyebrow">لماذا مبادرة حلم؟</span>
+          <h2>تجربة تعليمية واضحة تقود الطالب من الحيرة إلى القرار</h2>
+        </div>
+
+        <div class="proof-grid">
+          <article class="glass-card proof-card">
+            <i class="fas fa-route"></i>
+            <h3>كل دورة لها شخصية واضحة</h3>
+            <p>لن يحتار الطالب بين العناوين؛ كل منتج موصوف حسب المستوى والهدف والوقت المتاح.</p>
+          </article>
+          <article class="glass-card proof-card">
+            <i class="fas fa-brain"></i>
+            <h3>قرار مبني على مستوى فعلي</h3>
+            <p>الموقع لا يكتفي بالعرض فقط، بل يحلل الدرجة الحالية ونتيجة الاختبار ليقترح المسار الأفضل.</p>
+          </article>
+          <article class="glass-card proof-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>اشتراك منظم وسهل</h3>
+            <p>سلة، بيانات عميل، ملخص طلب، معلومات تحويل، ورفع إيصال في تجربة متسلسلة وواضحة.</p>
+          </article>
+          <article class="glass-card proof-card">
+            <i class="fab fa-telegram"></i>
+            <h3>تواصل سريع عبر تيليجرام</h3>
+            <p>تواصل مباشر مع مبادرة حلم على تيليجرام لتسريع المراجعة وتأكيد اشتراكك.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout -->
+    <section class="section checkout-section" id="checkout">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">إتمام الاشتراك</span>
+            <h2>أكمل طلب الاشتراك في الدورة</h2>
+            <p>بعد اختيار الدورات من السلة، سجّل بياناتك ثم استخدم بيانات التحويل البنكي وأرفق إيصال التحويل.</p>
+          </div>
+          <button class="btn btn-soft" type="button" onclick="toggleCart(true)">
+            <i class="fas fa-bag-shopping"></i>
+            مراجعة السلة
+          </button>
+        </div>
+
+        <div class="checkout-grid">
+          <aside class="glass-card order-summary-card">
+            <div class="card-head">
+              <h3>ملخص الطلب</h3>
+              <span id="orderItemsCount">0 عنصر</span>
+            </div>
+            <div id="checkoutSummary"></div>
+          </aside>
+
+          <div class="checkout-main">
+            <form class="glass-card checkout-form" id="checkoutForm">
+              <div class="card-head">
+                <h3>بيانات المشترك</h3>
+                <span>سيتم تجهيز رسالة التأكيد لك تلقائياً</span>
+              </div>
+
+              <div class="field-grid two-cols">
+                <label>
+                  <span>الاسم</span>
+                  <input type="text" id="customerName" required placeholder="اكتب اسمك الكامل" />
+                </label>
+                <label>
+                  <span>رقم التواصل</span>
+                  <input type="tel" id="customerPhone" required placeholder="05xxxxxxxx" />
+                </label>
+                <label>
+                  <span>البريد الإلكتروني</span>
+                  <input type="email" id="customerEmail" required placeholder="example@email.com" />
+                </label>
+                <label>
+                  <span>الدرجة المستهدفة</span>
+                  <input type="number" id="customerTarget" min="40" max="100" required placeholder="مثال: 90" />
+                </label>
+              </div>
+
+              <div class="bank-transfer-box">
+                <div class="bank-title">
+                  <i class="fas fa-building-columns"></i>
+                  <h3>بيانات التحويل البنكي</h3>
+                </div>
+                <div class="bank-grid">
+                  <div><span>البنك</span><strong id="bankNameText">بنك الإنماء</strong></div>
+                  <div><span>رقم الحساب</span><strong id="bankAccountText">68206067557000</strong></div>
+                  <div><span>الآيبان</span><strong class="iban" id="bankIbanText">SA4905000068206067557000</strong></div>
+                  <div><span>اسم المستفيد</span><strong id="bankBeneficiaryText">Creative Global Institution</strong></div>
+                </div>
+                <p class="bank-note">بعد التحويل، أرفق صورة الإيصال ثم أرسل الطلب عبر تيليجرام مبادرة حلم لإتمام اشتراكك.</p>
+              </div>
+
+              <div class="field-grid single-col receipt-area">
+                <label class="receipt-upload-box">
+                  <span>إرفاق إيصال التحويل</span>
+                  <input type="file" id="receiptFile" accept="image/*,.pdf" />
+                  <small>الصيغ المناسبة: صورة أو PDF</small>
+                </label>
+                <div class="receipt-preview" id="receiptPreview">
+                  <div class="receipt-placeholder">
+                    <i class="fas fa-file-arrow-up"></i>
+                    <p>لم يتم اختيار ملف بعد</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout-actions">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                  إرسال الطلب الآن
+                </button>
+                <button class="btn btn-outline" type="button" onclick="scrollToSection('courses')">
+                  <i class="fas fa-arrow-right"></i>
+                  الرجوع للدورات
+                </button>
+              </div>
+            </form>
+
+            <div class="glass-card confirmation-card hidden" id="confirmationCard">
+              <div class="success-state">
+                <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+                <h3 id="confirmationTitle">تم استلام الطلب</h3>
+                <p id="confirmationText">تواصل معنا عبر تيليجرام لإتمام تأكيد اشتراكك في مبادرة حلم.</p>
+              </div>
+
+              <div class="telegram-box">
+                <div class="telegram-head">
+                  <div>
+                    <span class="eyebrow inline">حساب مبادرة حلم على تيليجرام</span>
+                    <h4 id="telegramUsernameText">@qiyas_2026_2030</h4>
+                  </div>
+                  <a href="https://t.me/qiyas_2026_2030" target="_blank" rel="noopener" class="telegram-link" id="telegramPublicLink">
+                    <i class="fab fa-telegram"></i>
+                    فتح تيليجرام
+                  </a>
+                </div>
+
+                <textarea id="telegramMessage" readonly></textarea>
+
+                <div class="telegram-actions">
+                  <button class="btn btn-primary" type="button" onclick="copyTelegramMessage()">
+                    <i class="fas fa-copy"></i>
+                    نسخ ملخص الطلب
+                  </button>
+                  <button class="btn btn-outline" type="button" onclick="openTelegramOrder()" id="openTelegramBtn">
+                    <i class="fab fa-telegram"></i>
+                    إرسال عبر تيليجرام
+                  </button>
+                  <button class="btn btn-soft" type="button" onclick="downloadOrderSummary()">
+                    <i class="fas fa-file-arrow-down"></i>
+                    تحميل ملخص الطلب
+                  </button>
+                </div>
+                <p class="telegram-note" id="telegramNoteText">انسخ ملخص الطلب وأرسله لحساب مبادرة حلم على تيليجرام لإتمام تأكيد اشتراكك.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="مبادرة حلم" class="footer-logo" />
+        <div>
+          <strong>مبادرة حلم قدرات ثانوية</strong>
+          <p>منصة احترافية لدورات القدرات 2026 — طريقك للدرجة التي تحلم بها.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#home"><i class="fas fa-home"></i> الرئيسية</a>
+        <a href="#courses"><i class="fas fa-book-open"></i> الدورات</a>
+        <a href="#advisor"><i class="fas fa-wand-magic-sparkles"></i> الموصي الذكي</a>
+        <a href="#assessment"><i class="fas fa-clipboard-list"></i> تحديد المستوى</a>
+      </div>
+      <div class="footer-actions">
+        <a href="https://t.me/qiyas_2026_2030" target="_blank" rel="noopener" class="btn btn-primary" id="footerTelegramLink">
+          <i class="fab fa-telegram"></i>
+          تواصل معنا عبر تيليجرام
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 مبادرة حلم قدرات ثانوية — جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-overlay" onclick="toggleCart(false)"></div>
+    <div class="cart-panel">
+      <div class="cart-head">
+        <div>
+          <h3>سلة المشتريات</h3>
+          <p>أضف دورة أو أكثر وسيتم جمع السعر تلقائياً</p>
+        </div>
+        <button type="button" class="icon-btn" onclick="toggleCart(false)"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="cart-body" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total-line">
+          <span>الإجمالي الحالي</span>
+          <strong id="cartTotal">0 ر.س</strong>
+        </div>
+        <button class="btn btn-primary full-width" type="button" onclick="goToCheckout()">
+          <i class="fas fa-credit-card"></i>
+          متابعة الاشتراك
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scroll Top -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== FLOATING AI ASSISTANT ===== -->
+  <div class="ai-assistant" id="aiAssistant">
+    <button class="ai-toggle-btn" id="aiToggleBtn" onclick="toggleAIAssistant()" title="مساعد حلم الذكي">
+      <div class="ai-btn-inner">
+        <img src="logo.png" alt="مساعد حلم" class="ai-logo" />
+        <span class="ai-btn-pulse"></span>
+      </div>
+    </button>
+
+    <div class="ai-chat-panel" id="aiChatPanel">
+      <div class="ai-chat-header">
+        <div class="ai-header-left">
+          <img src="logo.png" alt="مساعد حلم" class="ai-header-logo" />
+          <div>
+            <strong>مساعد حلم الذكي</strong>
+            <span class="ai-status"><i class="fas fa-circle"></i> متاح الآن</span>
+          </div>
+        </div>
+        <button class="ai-close-btn" onclick="toggleAIAssistant()">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="ai-chat-messages" id="aiMessages">
+        <div class="ai-msg bot-msg">
+          <div class="ai-avatar"><img src="logo.png" alt="" /></div>
+          <div class="ai-bubble">
+            <p>أهلاً بك في <strong>مبادرة حلم قدرات ثانوية</strong> 🌟</p>
+            <p>أنا مساعدك الذكي، يمكنني مساعدتك في:</p>
+            <ul>
+              <li>اختيار الدورة المناسبة</li>
+              <li>الاستفسار عن الأسعار والمحتوى</li>
+              <li>التوجيه للاشتراك</li>
+              <li>الإجابة عن أسئلتك</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ai-quick-btns" id="aiQuickBtns">
+          <button onclick="aiQuickReply('ما هي الدورات المتاحة؟')">📚 الدورات المتاحة</button>
+          <button onclick="aiQuickReply('ما هي الأسعار؟')">💰 الأسعار</button>
+          <button onclick="aiQuickReply('كيف أشترك؟')">✅ كيف أشترك؟</button>
+          <button onclick="aiQuickReply('دورة مناسبة لمبتدئ')">🎯 أنا مبتدئ</button>
+          <button onclick="aiQuickReply('تواصل مع المبادرة')">📱 التواصل</button>
+        </div>
+      </div>
+
+      <div class="ai-chat-input">
+        <input type="text" id="aiInput" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter') sendAIMessage()" />
+        <button onclick="sendAIMessage()" class="ai-send-btn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/lafzi-questions.js"></script>
+  <script src="js/kami-questions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>

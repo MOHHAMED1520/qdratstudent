@@ -1,0 +1,62 @@
+[
+  {
+    "id": "09e8756b-f5a3-4b71-a86b-fae24cf05671",
+    "created_at": "2026-04-10T20:20:50.074Z",
+    "customer_name": null,
+    "summary": {
+      "lafzi": {
+        "percent": 72,
+        "answeredCount": 10,
+        "correct": 7
+      },
+      "kami": {
+        "percent": 80,
+        "answeredCount": 10,
+        "correct": 8
+      },
+      "totalAnswered": 20,
+      "totalCorrect": 15,
+      "combinedPercent": 75
+    },
+    "recommendation": {
+      "courseId": "intensive",
+      "title": "دورة قدرات المكثفة",
+      "reason": "ساعات المذاكرة اليومية محدودة، فالأفضل لك دورة مركزة تستثمر وقتك بأعلى كفاءة."
+    },
+    "meta": {
+      "targetScore": 90,
+      "daysLeft": 12,
+      "studyHours": 1.5
+    }
+  },
+  {
+    "id": "fad5830f-caf7-491b-ad59-13db14967534",
+    "created_at": "2026-04-10T20:20:41.274Z",
+    "customer_name": null,
+    "summary": {
+      "lafzi": {
+        "percent": 72,
+        "answeredCount": 12,
+        "correct": 9
+      },
+      "kami": {
+        "percent": 68,
+        "answeredCount": 10,
+        "correct": 7
+      },
+      "totalAnswered": 22,
+      "totalCorrect": 16,
+      "combinedPercent": 73
+    },
+    "recommendation": {
+      "courseId": "intensive",
+      "title": "دورة قدرات المكثفة",
+      "reason": "ساعات المذاكرة اليومية محدودة، فالأفضل لك دورة مركزة تستثمر وقتك بأعلى كفاءة."
+    },
+    "meta": {
+      "targetScore": 90,
+      "daysLeft": 12,
+      "studyHours": 1.5
+    }
+  }
+]

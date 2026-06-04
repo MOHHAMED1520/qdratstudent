@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة إدارة قدرات 2026 ستور</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon"><i class="fas fa-shield-halved"></i></div>
+        <div>
+          <strong>لوحة الإدارة</strong>
+          <span>قدرات 2026 ستور برو</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebarNav">
+        <button class="nav-tab active" data-tab="overview"><i class="fas fa-chart-pie"></i><span>نظرة عامة</span></button>
+        <button class="nav-tab" data-tab="settings"><i class="fas fa-gear"></i><span>إعدادات المتجر</span></button>
+        <button class="nav-tab" data-tab="orders"><i class="fas fa-bag-shopping"></i><span>الطلبات</span></button>
+        <button class="nav-tab" data-tab="results"><i class="fas fa-chart-line"></i><span>نتائج الاختبارات</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" class="ghost-link"><i class="fas fa-store"></i> فتح المتجر</a>
+        <button class="logout-btn" id="logoutBtn" type="button"><i class="fas fa-right-from-bracket"></i> تسجيل الخروج</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="topbar">
+        <div>
+          <small class="eyebrow">إدارة كاملة</small>
+          <h1>إدارة الدورات والطلبات ونتائج الاختبارات</h1>
+        </div>
+        <button class="refresh-btn" id="refreshAllBtn" type="button"><i class="fas fa-rotate"></i> تحديث البيانات</button>
+      </header>
+
+      <section class="login-card" id="loginCard">
+        <div class="card-head">
+          <h2>تسجيل دخول المدير</h2>
+          <p>استخدم اسم المستخدم وكلمة المرور المعرفة في متغيرات البيئة.</p>
+        </div>
+        <form id="loginForm" class="login-form">
+          <label>
+            <span>اسم المستخدم</span>
+            <input type="text" id="loginUsername" placeholder="admin" required />
+          </label>
+          <label>
+            <span>كلمة المرور</span>
+            <input type="password" id="loginPassword" placeholder="••••••••" required />
+          </label>
+          <button type="submit" class="primary-btn"><i class="fas fa-lock"></i> دخول لوحة التحكم</button>
+        </form>
+      </section>
+
+      <section class="dashboard hidden" id="dashboard">
+        <div class="stats-grid" id="statsGrid">
+          <article class="stat-card"><span>الطلبات</span><strong id="ordersCount">0</strong></article>
+          <article class="stat-card"><span>إجمالي المبيعات</span><strong id="salesTotal">0 ر.س</strong></article>
+          <article class="stat-card"><span>نتائج الاختبارات</span><strong id="resultsCount">0</strong></article>
+          <article class="stat-card"><span>الدورات</span><strong id="coursesCount">0</strong></article>
+        </div>
+
+        <section class="panel active" data-panel="overview">
+          <div class="two-col-grid">
+            <article class="surface-card">
+              <div class="card-head">
+                <h2>ملخص سريع</h2>
+                <span>آخر حالة للنظام</span>
+              </div>
+              <div class="overview-list" id="overviewList"></div>
+            </article>
+            <article class="surface-card">
+              <div class="card-head">
+                <h2>آخر الطلبات</h2>
+                <span>آخر 5 طلبات</span>
+              </div>
+              <div id="latestOrdersPreview" class="mini-list"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="settings">
+          <form id="settingsForm" class="surface-card settings-form">
+            <div class="card-head with-action">
+              <div>
+                <h2>إعدادات المتجر والمحتوى</h2>
+                <span>تعديل الأسعار، المحتوى، بيانات البنك وروابط تيليجرام</span>
+              </div>
+              <button type="submit" class="primary-btn"><i class="fas fa-floppy-disk"></i> حفظ الإعدادات</button>
+            </div>
+
+            <div class="form-section">
+              <h3>بيانات عامة</h3>
+              <div class="fields-grid two-col">
+                <label><span>اسم المتجر</span><input type="text" id="siteName" /></label>
+                <label><span>الوصف المختصر</span><input type="text" id="siteTagline" /></label>
+              </div>
+              <label><span>عنوان الهيرو</span><textarea id="heroTitle" rows="2"></textarea></label>
+              <label><span>وصف الهيرو</span><textarea id="heroSubtitle" rows="3"></textarea></label>
+            </div>
+
+            <div class="form-section">
+              <h3>التحويل البنكي</h3>
+              <div class="fields-grid two-col">
+                <label><span>اسم البنك</span><input type="text" id="bankName" /></label>
+                <label><span>رقم الحساب</span><input type="text" id="bankAccountNumber" /></label>
+                <label><span>الآيبان</span><input type="text" id="bankIban" /></label>
+                <label><span>اسم المستفيد</span><input type="text" id="bankBeneficiary" /></label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>تيليجرام</h3>
+              <div class="fields-grid two-col">
+                <label><span>الرابط العام</span><input type="url" id="telegramPublicLink" /></label>
+                <label><span>اسم المستخدم الظاهر</span><input type="text" id="telegramUsername" /></label>
+              </div>
+              <p class="help-text">الإرسال الفعلي يتم من السيرفر باستخدام <strong>TELEGRAM_BOT_TOKEN</strong> و <strong>TELEGRAM_CHAT_ID</strong> أو <strong>TELEGRAM_CHANNEL_USERNAME</strong>.</p>
+            </div>
+
+            <div class="form-section">
+              <div class="card-head compact">
+                <h3>الدورات والباقات</h3>
+                <span>يمكنك تعديل الأسعار، النصوص، المزايا، والمسارات</span>
+              </div>
+              <div id="coursesEditor" class="course-editor-grid"></div>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" data-panel="orders">
+          <div class="surface-card">
+            <div class="card-head with-action">
+              <div>
+                <h2>طلبات العملاء</h2>
+                <span>جميع الطلبات المسجلة من الموقع</span>
+              </div>
+              <button class="secondary-btn" id="refreshOrdersBtn" type="button"><i class="fas fa-rotate"></i> تحديث الطلبات</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>التاريخ</th>
+                    <th>العميل</th>
+                    <th>الدورات</th>
+                    <th>الإجمالي</th>
+                    <th>الهدف</th>
+                    <th>تيليجرام</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="results">
+          <div class="surface-card">
+            <div class="card-head with-action">
+              <div>
+                <h2>نتائج اختبار القدرات</h2>
+                <span>تحليلات المستخدمين وتوصيات الباقات</span>
+              </div>
+              <button class="secondary-btn" id="refreshResultsBtn" type="button"><i class="fas fa-rotate"></i> تحديث النتائج</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>التاريخ</th>
+                    <th>المتوسط</th>
+                    <th>اللفظي</th>
+                    <th>الكمي</th>
+                    <th>التوصية</th>
+                    <th>المدخلات</th>
+                  </tr>
+                </thead>
+                <tbody id="resultsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="adminToast"></div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

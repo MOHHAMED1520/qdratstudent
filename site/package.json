@@ -1,0 +1,18 @@
+{
+  "name": "qudrat-2026-store-pro",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:vercel": "vercel dev",
+    "dev:netlify": "netlify dev",
+    "dev:static": "python3 -m http.server 8080",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@netlify/functions": "^3.1.0"
+  }
+}
